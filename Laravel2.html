@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LaTutor</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body >
+  <header>
+    <nav class="navbar navbar-dark  bg-success " aria-label="Dark offcanvas navbar">
+    <div class="container-fluid">
+        <img src="Image/tsa_12244455 (1).png" >
+      <a class="navbar-brand" href="index.html"  >LaTutor</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarDark" aria-controls="offcanvasNavbarDark" aria-label="Toggle navigation">
+        <span ><i class="bi bi-grid-fill"></i></span>
+      </button>
+      <div class="offcanvas offcanvas-end text-bg-dark bg-success opacity-75  " tabindex="-1" id="offcanvasNavbarDark" aria-labelledby="offcanvasNavbarDarkLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarDarkLabel">Menu</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="Laravel1.html">What is Laravel </a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="Laravel2.html">installation  & Create Project</a>
+              </li>
+            
+             
+            
+          </ul>
+          
+        </div>
+      </div>
+    </div>
+  </nav>
+   
+  </header>
+
+
+
+<div class="container bg-secondary card   shadow  p-3 card mt-3 mb-3 ">
+  <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+    <div class="col-10 col-sm-8 col-lg-6">
+      <img src="Image/laravel.svg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="200" height="100" loading="lazy">
+    </div>
+    <div class="col-lg-6 ">
+      <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Creating a Laravel Project</h1>
+
+      <p class="lead">Before creating your first Laravel project, make sure that your local machine has PHP and Composer installed. If you are developing on macOS, PHP and Composer can be installed in minutes via Laravel Herd. In addition, we recommend installing Node and NPM.
+<br>
+        After you have installed PHP and Composer, you may create a new Laravel project via Composer's create-project command:
+        <br><br>
+        <i>composer create-project laravel/laravel example-app</i>
+        <br><br>
+         Or, you may create new Laravel projects by globally installing the Laravel installer via Composer:
+        <br><br>
+        <i>composer global require laravel/installer</i>
+         <br><br>
+         <i>
+            laravel new example-app</i>
+        <br><br>
+        Once the project has been created, start Laravel's local development server using Laravel Artisan's serve command:
+        <br><br>
+        <i>
+            cd example-app</i>
+         <br><br>
+         <i>
+            php artisan serve</i>
+        <br><br>
+        Once you have started the Artisan development server, your application will be accessible in your web browser at http://localhost:8000. Next, you're ready to start taking your next steps into the Laravel ecosystem. Of course, you may also want to configure a database.
+        <br><br>
+        
+        If you would like a head start when developing your Laravel application, consider using one of our starter kits. Laravel's starter kits provide backend and frontend authentication scaffolding for your new Laravel application.</p>
+      <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container bg-secondary card   shadow  p-3 card mt-3 mb-3">
+  <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+    <div class="col-10 col-sm-8 col-lg-6">
+      <img src="Image/laravel.svg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="200" height="100" loading="lazy">
+    </div>
+    <div class="col-lg-6">
+      <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Initial Configuration</h1>
+
+      <p class="lead">All of the configuration files for the Laravel framework are stored in the config directory. Each option is documented, so feel free to look through the files and get familiar with the options available to you.
+
+        Laravel needs almost no additional configuration out of the box. You are free to get started developing! However, you may wish to review the config/app.php file and its documentation. It contains several options such as timezone and locale that you may wish to change according to your application.</p>
+        <br>
+
+        <b>Environment Based Configuration</b>
+        <p>Since many of Laravel's configuration option values may vary depending on whether your application is running on your local machine or on a production web server, many important configuration values are defined using the .env file that exists at the root of your application.
+
+        Your .env file should not be committed to your application's source control, since each developer / server using your application could require a different environment configuration. Furthermore, this would be a security risk in the event an intruder gains access to your source control repository, since any sensitive credentials would get exposed.
+        
+        
+        For more information about the .env file and environment based configuration, check out the full configuration documentation.
+
+        </p>
+        <b>Databases and Migrations</b>
+        <p>Now that you have created your Laravel application, you probably want to store some data in a database. By default, your application's .env configuration file specifies that Laravel will be interacting with a MySQL database and will access the database at 127.0.0.1.
+
+
+            If you are developing on macOS and need to install MySQL, Postgres, or Redis locally, consider using DBngin.
+            
+            If you do not want to install MySQL or Postgres on your local machine, you can always use a SQLite database. SQLite is a small, fast, self-contained database engine. To get started, update your .env configuration file to use Laravel's sqlite database driver. You may remove the other database configuration options:
+            
+<br><br>
+            DB_CONNECTION=sqlite <br>
+            DB_CONNECTION=mysql <br>
+            DB_HOST=127.0.0.1 <br>
+            DB_PORT=3306 <br>
+            DB_DATABASE=laravel <br>
+            DB_USERNAME=root <br>
+            DB_PASSWORD= 
+            <br><br>
+
+            Once you have configured your SQLite database, you may run your application's database migrations, which will create your application's database tables:
+            
+            php artisan migrate
+            
+            If an SQLite database does not exist for your application, Laravel will ask you if you would like the database to be created. Typically, the SQLite database file will be created at database/database.sqlite.
+        </p>
+        <b>Directory Configuration</b>
+        <p>Laravel should always be served out of the root of the "web directory" configured for your web server. You should not attempt to serve a Laravel application out of a subdirectory of the "web directory". Attempting to do so could expose sensitive files present within your application.</p>
+       
+      <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+<footer class="footer ">
+  <div class="bg-primary  p-3  ">
+    <div class="row">
+      <div class="col-md-6">
+        <h4>About Latutor</h4>
+        <p>latutor is web for learn Laravel</p>
+      </div>
+      <div class="col-md-6">
+        <h4>Contact Us</h4>
+        <p>Email: info@Latutor.com</p>
+        <p>Phone: 083498569566</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
